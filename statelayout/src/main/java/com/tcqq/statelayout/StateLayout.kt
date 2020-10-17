@@ -9,7 +9,6 @@ import androidx.annotation.*
 import androidx.annotation.IntRange
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
-import com.tcqq.statelayout.StateLayout.State.*
 import kotlinx.android.synthetic.main.state_layout_info.view.*
 
 /**
@@ -22,7 +21,7 @@ class StateLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
-    private var state: State = CONTENT
+    private var state: State = State.CONTENT
     private var stateMap = HashMap<State, View>()
 
     @LayoutRes
@@ -36,7 +35,7 @@ class StateLayout @JvmOverloads constructor(
 
         state = State.values()[a.getInteger(
             R.styleable.StateLayout_state_layout_state,
-            CONTENT.ordinal
+            State.CONTENT.ordinal
         )]
         loadingRes =
             a.getResourceId(
@@ -60,15 +59,15 @@ class StateLayout @JvmOverloads constructor(
 
         if (childCount == 1) {
             val contentView = getChildAt(0)
-            stateMap[CONTENT] = contentView
+            stateMap[State.CONTENT] = contentView
         }
 
         if (loadingRes != -1) {
-            setViewForState(LOADING, loadingRes)
+            setViewForState(State.LOADING, loadingRes)
         }
 
         if (infoRes != -1) {
-            setViewForState(INFO, infoRes)
+            setViewForState(State.INFO, infoRes)
         }
 
         setState(state)
@@ -113,9 +112,6 @@ class StateLayout @JvmOverloads constructor(
         state_layout_info_button.isVisible = isVisible
     }
 
-    enum class State {
-        CONTENT, LOADING, INFO
-    }
 
     private fun setViewForState(state: State, @LayoutRes res: Int) {
         val view = LayoutInflater.from(context).inflate(res, this, false)
@@ -143,3 +139,9 @@ class StateLayout @JvmOverloads constructor(
         return color and 0x00ffffff or (alpha shl 24)
     }
 }
+
+enum class State {
+    CONTENT, LOADING, INFO
+}
+
+

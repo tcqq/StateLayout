@@ -10,7 +10,7 @@ publish {
     groupId = 'com.tcqq.android'
     artifactId = 'statelayout'
     repoName = 'android'
-    publishVersion = '1.0.1'
+    publishVersion = '2.0.0'
     desc = 'StateLayout can display different state layouts, Content, Loading, Info.'
     website = 'https://github.com/tcqq/StateLayout'
 }

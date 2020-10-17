@@ -5,7 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.tcqq.statelayout.StateLayout
+import com.tcqq.statelayout.State
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -28,11 +28,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_content -> state_layout.setState(StateLayout.State.CONTENT)
-            R.id.action_loading -> state_layout.setState(StateLayout.State.LOADING)
+            R.id.action_content -> state_layout.setState(State.CONTENT)
+            R.id.action_loading -> state_layout.setState(State.LOADING)
             R.id.action_info -> {
                 state_layout.apply {
-                    setState(StateLayout.State.INFO)
+                    setState(State.INFO)
                     infoTitle("Failed to load")
                     infoMessage("Network connection failed, please try again later")
                     infoImage(R.drawable.ic_baseline_cloud_off_24, R.color.state_layout_error_color)
