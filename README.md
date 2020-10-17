@@ -18,12 +18,12 @@ StateLayout can display different state layouts, Content, Loading, Info.
 ```
 
 ```
-state_layout.setState(StateLayout.State.CONTENT)
+state_layout.setState(State.CONTENT)
 
-state_layout.setState(StateLayout.State.LOADING)
+state_layout.setState(State.LOADING)
 
 state_layout.apply {
-    setState(StateLayout.State.INFO)
+    setState(State.INFO)
     infoTitle("Failed to load")
     infoMessage("Network connection failed, please try again later")
     infoImage(R.drawable.ic_baseline_cloud_off_24, R.color.state_layout_error_color)
