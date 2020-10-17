@@ -12,9 +12,9 @@ StateLayout can display different state layouts, Content, Loading, Info.
     android:id="@+id/state_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:state_layout_state="info"
     tools:state_layout_info_layout="@layout/custom_state_layout_info"
-    tools:state_layout_loading_layout="@layout/custom_state_layout_loading"
-    app:state_layout_state="info">
+    tools:state_layout_loading_layout="@layout/custom_state_layout_loading">
 ```
 
 ```
