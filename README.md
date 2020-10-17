@@ -2,7 +2,7 @@
 [ ![Download](https://api.bintray.com/packages/tcqq/android/statelayout/images/download.svg?version=2.0.0) ](https://bintray.com/tcqq/android/statelayout/2.0.0/link)
 [![Licence](https://img.shields.io/badge/Licence-Apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-# ExpandView
+# StateLayout
 
 StateLayout can display different state layouts, Content, Loading, Info.
 
