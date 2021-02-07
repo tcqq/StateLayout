@@ -42,7 +42,7 @@ repositories {
 ```
 ```
 dependencies {
-    // Using JCenter
+    // Using JitPack
     implementation 'com.github.tcqq:statelayout:2.0.1'
 }
 ```
