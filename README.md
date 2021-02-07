@@ -1,5 +1,5 @@
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
-[ ![Download](https://api.bintray.com/packages/tcqq/android/statelayout/images/download.svg?version=2.0.1) ](https://bintray.com/tcqq/android/statelayout/2.0.1/link)
+[![JitPack](https://jitpack.io/v/tcqq/StateLayout.svg)](https://jitpack.io/#tcqq/StateLayout)
 [![Licence](https://img.shields.io/badge/Licence-Apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 # StateLayout
@@ -37,13 +37,13 @@ state_layout.apply {
 #### build.gradle
 ```
 repositories {
-    jcenter()
+    maven { url 'https://jitpack.io' }
 }
 ```
 ```
 dependencies {
     // Using JCenter
-    implementation 'com.tcqq.android:statelayout:2.0.1'
+    implementation 'com.github.tcqq:statelayout:2.0.1'
 }
 ```
 
